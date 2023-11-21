@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>随机背景颜色</title>
+    <title>原神</title>
     <style>
         body {
             display: flex;
@@ -11,7 +11,9 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            transition: background-color 0.5s ease; /* 添加颜色过渡效果 */
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.5s ease; /* 添加背景图过渡效果 */
         }
 
         button {
@@ -21,16 +23,13 @@
         }
     </style>
 </head>
-<body>
-    <button onclick="changeBackgroundColor()">点击我</button>
+<body style="background-image: url('ysqd.jpg');">
+    <button onclick="changeBackground()">原神</button>
 
     <script>
-        function changeBackgroundColor() {
-            // 生成随机颜色
-            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-
-            // 将背景颜色设置为随机颜色
-            document.body.style.backgroundColor = randomColor;
+        function changeBackground() {
+            // 更改背景图片
+            document.body.style.backgroundImage = "url('新的背景.jpg')";
         }
     </script>
 </body>
